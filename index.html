@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <title>01 - Форма</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext"
+            rel="stylesheet"
+        />
+
+        		<!-- Open Graph -->
+		<meta property="og:url" content="http://dmgenu.ru/crm-js/index.html" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Проект crm" />
+		<meta property="og:description" content="Проект crm" />
+		<meta property="og:image" content="./img/opengraph.jpg"/>
+
+                <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./img/favicons/site.webmanifest">
+        <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+
+    <body class="with-nav radial-bg flex-center">
+        <!-- Навигация по проекту -->
+        <nav class="project-nav">
+            <div class="project-nav__links-wrapper">
+                <a href="index.html">Форма добавления заявок</a>
+                <a href="table.html">Таблица с заявками</a>
+            </div>
+        </nav>
+
+        <!-- white-plate -->
+        <div class="white-plate white-plate--payment">
+            <div class="container-fluid">
+                <!-- header -->
+                <div class="white-plate__header text-center">
+                    <p class="white-plate__logo"><span>Форма</span> заявок</p>
+                </div>
+                <!-- // header -->
+
+                <div
+                    class="white-plate__line-between white-plate__line-between--main"
+                ></div>
+
+                <form id="form" method="POST" action="">
+                    <label>Ваши данные:</label>
+                    <div class="form-group">
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            autocomplete="on"
+                            class="form-control"
+                            placeholder="Имя и Фамилия"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            id="phone"
+                            type="text"
+                            name="phone"
+                            autocomplete="on"
+                            class="form-control"
+                            placeholder="Телефон"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            autocomplete="on"
+                            class="form-control"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Продукт:</label>
+                        <select
+                            id="product"
+                            name="product"
+                            class="form-control"
+                            id="exampleFormControlSelect1"
+                        >
+                            <option value="course-html">Курс по верстке</option>
+                            <option value="course-js">
+                                Курс по JavaScript
+                            </option>
+                            <option value="course-vue">Курс по VUE JS</option>
+                            <option value="course-php">Курс по PHP</option>
+                            <option value="course-wordpress">
+                                Курс по WordPress
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button
+                            id="submit-btn"
+                            type="submit"
+                            class="btn btn-lg btn-primary btn-block"
+                        >
+                            Оформить заявку
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- // white-plate -->
+
+        <!-- Модель -->
+        <script src="./js/model.js" type="module"></script>
+
+        <!-- Форма -->
+        <script src="./js/test-data/test-data.js" type="module"></script>
+        <script src="./js/form/form.view.js" type="module"></script>
+        <script src="./js/form/form.controller.js" type="module"></script>
+    </body>
+</html>
